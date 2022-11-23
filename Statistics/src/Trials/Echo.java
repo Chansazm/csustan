@@ -1,8 +1,8 @@
-package Averages;
-//importing the right tools
+package Trials;
+
 import java.io.*; // for File
 import java.util.*; // for Scanner
-public class Mean {
+public class Echo {
     public static void main(String[] args) throws FileNotFoundException {
         //Getting the file
         System.out.println("Enter the File name: ");
