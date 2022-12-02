@@ -12,21 +12,29 @@ public class Mean {
 
         Scanner input = new Scanner(new File(st));
         //Initialising variables
+        int[] array;
         double sum = 0.0;
-        double count = 0.0;
+
+        //Declaring an array that will contain the numbers
+        ArrayList<Double> list = new ArrayList<>();
         //looping through the input
         System.out.println("The numbers are:");
         while (input.hasNextDouble()) {
             double next = input.nextDouble();
-            System.out.println(next);
-            //counting the number of numbers
-            count++;
+            //adding the numbers in variable next to the array at each iteration
+            list.add(next);
+
+            //finding the sum of the numbers
             sum = sum + next;
         }
+
+
+
+        System.out.println(list.size());
         //System.out.printf("Sum = %.1f\n", sum);
 
-        //calculating the Mean
-        double mean = sum/count;
+        //calculating the Mean by dividing by the number of items in the array
+        double mean = sum/list.size();
         //Outputting the Mean
         System.out.println("The Mean is: "+mean +"\nThanks!");
     }
